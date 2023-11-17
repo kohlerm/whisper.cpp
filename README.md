@@ -284,7 +284,13 @@ speed-up - more than x3 faster compared with CPU-only execution. Here are the in
   ```bash
   ./models/generate-coreml-model.sh base.en
   ```
-
+  In case you get an error like 'xcrun: error: unable to find utility "coremlc", not a developer tool or in PATH', run
+  
+  ```bash
+  sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+  ```
+  first. 
+  
   This will generate the folder `models/ggml-base.en-encoder.mlmodelc`
 
 - Build `whisper.cpp` with Core ML support:
